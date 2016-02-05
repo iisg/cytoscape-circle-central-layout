@@ -1,0 +1,39 @@
+{
+  "name": "cytoscape-circle-central-layout",
+  "version": "0.1.0",
+  "main": [
+    "dist/cytoscape-circle-central-layout.js"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iisg/cytoscape-circle-central-layout"
+  },
+  "moduleType": [
+    "globals"
+  ],
+  "description": "Layout for Cytoscape.js nodes putting nodes around one central",
+  "license": "MIT",
+  "dependencies": {
+    "cytoscape": ">= 2.2"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "coffeelint.json",
+    "Gulpfile.coffee",
+    "Gulpfile.js",
+    "package.json"
+  ],
+  "keywords": [
+    "agh",
+	"iisg",
+    "layout",
+    "circle",
+	"central",
+    "cytoscape",
+    "cytoscape.js",
+    "extension"
+  ]
+}
