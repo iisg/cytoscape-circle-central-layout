@@ -5,25 +5,18 @@
       centralNode: void 0,
       parentNode: void 0,
       shiftCentral: false,
-      fit: true,
-      padding: 30,
-      boundingBox: void 0,
       avoidOverlap: true,
       startAngle: 3 / 2 * Math.PI,
       counterclockwise: false,
-      sort: void 0,
-      animate: false,
-      animationDuration: 500,
-      ready: void 0,
-      stop: void 0
+      sort: void 0
     };
 
     function CircleCentralLayout(options) {
-      this.options = $$.util.extend(true, {}, this.defaults, options);
+      this.options = $.extend({}, this.defaults, options);
     }
 
     CircleCentralLayout.prototype.run = function() {
-      var bb, center, centralX, centralY, cy, dTheta, dcos, distanceToAdd, dsin, dx, dy, edgeLength, eles, getPosition, h, j, len, minDistance, node, nodes, options, parentX, parentY, r, rMin, theta, w;
+      var center, centralX, centralY, cy, dTheta, dcos, distanceToAdd, dsin, dx, dy, edgeLength, eles, getPosition, h, j, len, minDistance, node, nodes, options, parentX, parentY, r, rMin, theta, w;
       options = this.options;
       cy = options.cy;
       eles = options.eles;
@@ -34,15 +27,9 @@
       if (!nodes.length) {
         return this;
       }
-      bb = $$.util.makeBoundingBox(options.boundingBox ? options.boundingBox : {
-        x1: 0,
-        y1: 0,
-        w: cy.width(),
-        h: cy.height()
-      });
       center = {
-        x: bb.x1 + bb.w / 2,
-        y: bb.y1 + bb.h / 2
+        x: cy.width() / 2,
+        y: cy.height() / 2
       };
       theta = options.startAngle;
       dTheta = 2 * Math.PI / nodes.length;
