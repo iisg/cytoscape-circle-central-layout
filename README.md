@@ -26,6 +26,7 @@ cy.layout(
 )
 ```
 where:
-centralNode - is a central node which is put in the centre of a circle
-parentNode - is a parent of central node, necessary if you want to push away circle node from its parent 
-shiftCentral - whether to push away central from its parent (so that circles are not overlapping each other)
+
+- **centralNode** - is a central node which is put in the centre of a circle
+- **parentNode** - is a parent of central node, necessary if you want to push away circle node from its parent 
+- **shiftCentral** - whether to push away central from its parent (so that circles are not overlapping each other)
